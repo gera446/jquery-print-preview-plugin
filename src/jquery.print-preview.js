@@ -14,7 +14,7 @@
 	$.fn.printPreview = function() {
 		this.each(function() {
 			$(this).bind('click', function(e) {
-			    e.preventDefault();
+			    e && e.preventDefault();
 			    if (!$('#print-modal').length) {
 			        $.printPreview.loadPrintPreview();
 			    }
