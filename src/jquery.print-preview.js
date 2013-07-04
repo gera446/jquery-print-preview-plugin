@@ -13,7 +13,7 @@
 	// Initialization
 	$.fn.printPreview = function() {
 		this.each(function() {
-			$(this).bind('click', function(e) {
+			$('body').on('click touch', this, function(e) {
 			    e.preventDefault();
 			    if (!$('#print-modal').length) {
 			        $.printPreview.loadPrintPreview();
